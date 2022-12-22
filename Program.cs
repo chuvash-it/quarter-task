@@ -12,8 +12,8 @@ for (int i = 0; i < array.Length; i++)
 }
 SortingArray(array, size);
 string [] array2 = SortingArray(array, size);
-
-
+Console.WriteLine("Элементы массива содержащие не более трех символов: ");
+PrintArray(array2);
 string [] SortingArray(string [] arr1, int s) 
 {
     string [] arr2 = new string[s];  // создаем массив и включаем в него строки не более 3 символов
@@ -34,4 +34,11 @@ string [] SortingArray(string [] arr1, int s)
         l++;
     }
     return arr3;
+}
+void PrintArray(string [] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i] + " | ");  // " | " - для проверки отсутсвия пустых элементов массива
+    }
 }
